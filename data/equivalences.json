@@ -1,0 +1,5321 @@
+{
+  "qiskit_version": "2.5.1",
+  "extracted_at": "2026-08-09T11:20:02.591954+00:00",
+  "gate_count": 50,
+  "equivalence_count": 130,
+  "gates": [
+    {
+      "name": "c3sx",
+      "num_qubits": 4,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cp",
+              "qubits": [
+                0,
+                3
+              ],
+              "params": [
+                "0.39269908169872414"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cp",
+              "qubits": [
+                1,
+                3
+              ],
+              "params": [
+                "-0.39269908169872414"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cp",
+              "qubits": [
+                1,
+                3
+              ],
+              "params": [
+                "0.39269908169872414"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                1,
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cp",
+              "qubits": [
+                2,
+                3
+              ],
+              "params": [
+                "-0.39269908169872414"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cp",
+              "qubits": [
+                2,
+                3
+              ],
+              "params": [
+                "0.39269908169872414"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                1,
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cp",
+              "qubits": [
+                2,
+                3
+              ],
+              "params": [
+                "-0.39269908169872414"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cp",
+              "qubits": [
+                2,
+                3
+              ],
+              "params": [
+                "0.39269908169872414"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                3
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ccx",
+      "num_qubits": 3,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                1,
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "tdg",
+              "qubits": [
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "t",
+              "qubits": [
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                1,
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "tdg",
+              "qubits": [
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "t",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "t",
+              "qubits": [
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "t",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "tdg",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "csx",
+              "qubits": [
+                1,
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "z",
+              "qubits": [
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "sdg",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "csx",
+              "qubits": [
+                1,
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "z",
+              "qubits": [
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "csx",
+              "qubits": [
+                0,
+                2
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ccz",
+      "num_qubits": 3,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "ccx",
+              "qubits": [
+                0,
+                1,
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                2
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ch",
+      "num_qubits": 2,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "s",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "t",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "tdg",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "sdg",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cp",
+      "num_qubits": 2,
+      "source_params": [
+        "\u03f4"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "p",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "0.5*\u03f4"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "p",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "(-0.5)*\u03f4"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "p",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "0.5*\u03f4"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "cu1",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "global_phase": "0.25*\u03f4",
+          "instructions": [
+            {
+              "name": "rzz",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "(-0.5)*\u03f4"
+              ]
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "0.5*\u03f4"
+              ]
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "0.5*\u03f4"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "crx",
+      "num_qubits": 2,
+      "source_params": [
+        "\u03f4"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "s",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "u",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "(-0.5)*\u03f4",
+                "0.0",
+                "0.0"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "u",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "0.5*\u03f4",
+                "-1.5707963267948966",
+                "0.0"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "s",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "ry",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "(-0.5)*\u03f4"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "ry",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "0.5*\u03f4"
+              ]
+            },
+            {
+              "name": "sdg",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "0.5*\u03f4"
+              ]
+            },
+            {
+              "name": "rxx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "(-0.5)*\u03f4"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "crz",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cry",
+      "num_qubits": 2,
+      "source_params": [
+        "\u03f4"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "ry",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "0.5*\u03f4"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "ry",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "(-0.5)*\u03f4"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "rx",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "crz",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "crx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "sdg",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "0.5*\u03f4"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rzz",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "(-0.5)*\u03f4"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "crz",
+      "num_qubits": 2,
+      "source_params": [
+        "\u03f4"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "0.5*\u03f4"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "(-0.5)*\u03f4"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "rx",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "cry",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "crx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "0.5*\u03f4"
+              ]
+            },
+            {
+              "name": "rzz",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "(-0.5)*\u03f4"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cs",
+      "num_qubits": 2,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "t",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "t",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "tdg",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "csx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "csdg",
+      "num_qubits": 2,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "t",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "tdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "tdg",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "csx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cswap",
+      "num_qubits": 3,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "cx",
+              "qubits": [
+                2,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "ccx",
+              "qubits": [
+                0,
+                1,
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                2,
+                1
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "csx",
+      "num_qubits": 2,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cs",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.7853981633974483",
+          "instructions": [
+            {
+              "name": "x",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "rzx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "0.7853981633974483"
+              ]
+            },
+            {
+              "name": "tdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "x",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "0.7853981633974483"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cu",
+      "num_qubits": 2,
+      "source_params": [
+        "\u03f4",
+        "\u03c6",
+        "\u03bb",
+        "\u03b3"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "p",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03b3"
+              ]
+            },
+            {
+              "name": "p",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "0.5*(\u03bb + \u03c6)"
+              ]
+            },
+            {
+              "name": "p",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "0.5*(\u03bb - \u03c6)"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "u",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "(-0.5)*\u03f4",
+                "0.0",
+                "(-0.5)*(\u03bb + \u03c6)"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "u",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "0.5*\u03f4",
+                "\u03c6",
+                "0.0"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "p",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03b3"
+              ]
+            },
+            {
+              "name": "cu3",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "\u03f4",
+                "\u03c6",
+                "\u03bb"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cu1",
+      "num_qubits": 2,
+      "source_params": [
+        "\u03bb"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "p",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "0.5*\u03bb"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "p",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "(-0.5)*\u03bb"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "p",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "0.5*\u03bb"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cu3",
+      "num_qubits": 2,
+      "source_params": [
+        "\u03f4",
+        "\u03c6",
+        "\u03bb"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "p",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "0.5*(\u03bb + \u03c6)"
+              ]
+            },
+            {
+              "name": "p",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "0.5*(\u03bb - \u03c6)"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "u",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "(-0.5)*\u03f4",
+                "0.0",
+                "(-0.5)*(\u03bb + \u03c6)"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "u",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "0.5*\u03f4",
+                "\u03c6",
+                "0.0"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "cu",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "\u03f4",
+                "\u03c6",
+                "\u03bb",
+                "0.0"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cx",
+      "num_qubits": 2,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.7853981633974483",
+          "instructions": [
+            {
+              "name": "sdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "sxdg",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "ecr",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "x",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "5.497787143782138",
+          "instructions": [
+            {
+              "name": "ry",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rxx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "ry",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "global_phase": "0.7853981633974483",
+          "instructions": [
+            {
+              "name": "ry",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rxx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "ry",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "global_phase": "0.7853981633974483",
+          "instructions": [
+            {
+              "name": "ry",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rxx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "ry",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "global_phase": "5.497787143782138",
+          "instructions": [
+            {
+              "name": "ry",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rxx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "ry",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cz",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "global_phase": "2.356194490192345",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "x",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "iswap",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "x",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "x",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "iswap",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "x",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "global_phase": "5.497787143782138",
+          "instructions": [
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "ry",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "3.141592653589793"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "ecr",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "u",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "1.5707963267948966",
+                "0.0",
+                "3.141592653589793"
+              ]
+            },
+            {
+              "name": "cp",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "3.141592653589793"
+              ]
+            },
+            {
+              "name": "u",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "1.5707963267948966",
+                "0.0",
+                "3.141592653589793"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "u",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "1.5707963267948966",
+                "0.0",
+                "3.141592653589793"
+              ]
+            },
+            {
+              "name": "u",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "0.0",
+                "0.0",
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "crz",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "3.141592653589793"
+              ]
+            },
+            {
+              "name": "u",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "1.5707963267948966",
+                "0.0",
+                "3.141592653589793"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "global_phase": "0.7853981633974483",
+          "instructions": [
+            {
+              "name": "rzx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "sdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "sxdg",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cy",
+      "num_qubits": 2,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "sdg",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cz",
+      "num_qubits": 2,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dcx",
+      "num_qubits": 2,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                1,
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "sdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "sdg",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "iswap",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ecr",
+      "num_qubits": 2,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "rzx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "0.7853981633974483"
+              ]
+            },
+            {
+              "name": "x",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "rzx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "-0.7853981633974483"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "5.497787143782138",
+          "instructions": [
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "sx",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "x",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "h",
+      "num_qubits": 1,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "u",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "1.5707963267948966",
+                "0.0",
+                "3.141592653589793"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "u2",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "0.0",
+                "3.141592653589793"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "global_phase": "5.497787143782138",
+          "instructions": [
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "sx",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "global_phase": "0.7853981633974483",
+          "instructions": [
+            {
+              "name": "sdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "sxdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "sdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "global_phase": "1.5707963267948966",
+          "instructions": [
+            {
+              "name": "ry",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "3.141592653589793"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "global_phase": "1.5707963267948966",
+          "instructions": [
+            {
+              "name": "r",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "1.5707963267948966",
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "r",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "3.141592653589793",
+                "0.0"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "id",
+      "num_qubits": 1,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "u",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "0.0",
+                "0.0",
+                "0.0"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "rx",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "0.0"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "ry",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "0.0"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "0.0"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "iswap",
+      "num_qubits": 2,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                1,
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "p",
+      "num_qubits": 1,
+      "source_params": [
+        "\u03f4"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "u1",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "u",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "0.0",
+                "0.0",
+                "\u03f4"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "r",
+      "num_qubits": 1,
+      "source_params": [
+        "\u03f4",
+        "\u03c6"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "u",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03f4",
+                "-1.5707963267948966 + \u03c6",
+                "1.5707963267948966 - \u03c6"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "rcccx",
+      "num_qubits": 4,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "t",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                2,
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "tdg",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "t",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                1,
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "tdg",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "t",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                1,
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "tdg",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "t",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                2,
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "tdg",
+              "qubits": [
+                3
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                3
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "rccx",
+      "num_qubits": 3,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "t",
+              "qubits": [
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                1,
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "tdg",
+              "qubits": [
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "t",
+              "qubits": [
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                1,
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "tdg",
+              "qubits": [
+                2
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                2
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "rx",
+      "num_qubits": 1,
+      "source_params": [
+        "\u03f4"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "r",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03f4",
+                "0.0"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "rxx",
+      "num_qubits": 2,
+      "source_params": [
+        "\u03f4"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "rzx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rzz",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ry",
+      "num_qubits": 1,
+      "source_params": [
+        "\u03f4"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "r",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03f4",
+                "1.5707963267948966"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "sdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ryy",
+      "num_qubits": 2,
+      "source_params": [
+        "\u03f4"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "rx",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "sxdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "sxdg",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "sx",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "sx",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "rx",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rzz",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "sdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "sdg",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rxx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "s",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "rz",
+      "num_qubits": 1,
+      "source_params": [
+        "\u03bb"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "(-0.5)*\u03bb",
+          "instructions": [
+            {
+              "name": "p",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03bb"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "sx",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "ry",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-\u03bb"
+              ]
+            },
+            {
+              "name": "sxdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03bb"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "rzx",
+      "num_qubits": 2,
+      "source_params": [
+        "\u03f4"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rzz",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "rzz",
+      "num_qubits": 2,
+      "source_params": [
+        "\u03f4"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rxx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rzx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "h",
+              "qubits": [
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "global_phase": "0.5*\u03f4",
+          "instructions": [
+            {
+              "name": "cp",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "(-2)*\u03f4"
+              ]
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "rx",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "ryy",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "\u03f4"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rx",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "s",
+      "num_qubits": 1,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "p",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "t",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "t",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sdg",
+      "num_qubits": 1,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "p",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "z",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "z",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "tdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "tdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "swap",
+      "num_qubits": 2,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                1,
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "sx",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "ecr",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "sx",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "ecr",
+              "qubits": [
+                1,
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "sx",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "ecr",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "global_phase": "4.71238898038469",
+          "instructions": [
+            {
+              "name": "sx",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "sx",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cz",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "sx",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "sx",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cz",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "sx",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "sx",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cz",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sx",
+      "num_qubits": 1,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.7853981633974483",
+          "instructions": [
+            {
+              "name": "sdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "sdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.7853981633974483",
+          "instructions": [
+            {
+              "name": "rx",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sxdg",
+      "num_qubits": 1,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "5.497787143782138",
+          "instructions": [
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "5.497787143782138",
+          "instructions": [
+            {
+              "name": "rx",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "t",
+      "num_qubits": 1,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "p",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "0.7853981633974483"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "tdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "sdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "z",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tdg",
+      "num_qubits": 1,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "p",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-0.7853981633974483"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "t",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "z",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "u",
+      "num_qubits": 1,
+      "source_params": [
+        "\u03f4",
+        "\u03c6",
+        "\u03bb"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "u3",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03f4",
+                "\u03c6",
+                "\u03bb"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "u1",
+      "num_qubits": 1,
+      "source_params": [
+        "\u03bb"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "u3",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "0.0",
+                "0.0",
+                "\u03bb"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "p",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03bb"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "global_phase": "0.5*\u03bb",
+          "instructions": [
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03bb"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "u2",
+      "num_qubits": 1,
+      "source_params": [
+        "\u03c6",
+        "\u03bb"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "u",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "1.5707963267948966",
+                "\u03c6",
+                "\u03bb"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "5.497787143782138",
+          "instructions": [
+            {
+              "name": "u1",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-1.5707963267948966 + \u03bb"
+              ]
+            },
+            {
+              "name": "sx",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "u1",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "1.5707963267948966 + \u03c6"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "u3",
+      "num_qubits": 1,
+      "source_params": [
+        "\u03f4",
+        "\u03c6",
+        "\u03bb"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.5*(\u03bb + \u03c6 - 3.141592653589793)",
+          "instructions": [
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03bb"
+              ]
+            },
+            {
+              "name": "sx",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "3.141592653589793 + \u03f4"
+              ]
+            },
+            {
+              "name": "sx",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "9.42477796076938 + \u03c6"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "u",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03f4",
+                "\u03c6",
+                "\u03bb"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "x",
+      "num_qubits": 1,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "u",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "3.141592653589793",
+                "0.0",
+                "3.141592653589793"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "global_phase": "1.5707963267948966",
+          "instructions": [
+            {
+              "name": "y",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "z",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "global_phase": "1.5707963267948966",
+          "instructions": [
+            {
+              "name": "rx",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "3.141592653589793"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xx_minus_yy",
+      "num_qubits": 2,
+      "source_params": [
+        "\u03f4",
+        "\u03b2"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "-\u03b2"
+              ]
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "sx",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "s",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "ry",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "0.5*\u03f4"
+              ]
+            },
+            {
+              "name": "ry",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "(-0.5)*\u03f4"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "sdg",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "sxdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "\u03b2"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-\u03b2"
+              ]
+            },
+            {
+              "name": "rxx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "0.5*\u03f4"
+              ]
+            },
+            {
+              "name": "ryy",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "(-0.5)*\u03f4"
+              ]
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03b2"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xx_plus_yy",
+      "num_qubits": 2,
+      "source_params": [
+        "\u03f4",
+        "\u03b2"
+      ],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03b2"
+              ]
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "sx",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                1,
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "ry",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "(-0.5)*\u03f4"
+              ]
+            },
+            {
+              "name": "ry",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "(-0.5)*\u03f4"
+              ]
+            },
+            {
+              "name": "cx",
+              "qubits": [
+                1,
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "sdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "-1.5707963267948966"
+              ]
+            },
+            {
+              "name": "sxdg",
+              "qubits": [
+                1
+              ],
+              "params": []
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                1
+              ],
+              "params": [
+                "1.5707963267948966"
+              ]
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-\u03b2"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "\u03b2"
+              ]
+            },
+            {
+              "name": "rxx",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "0.5*\u03f4"
+              ]
+            },
+            {
+              "name": "ryy",
+              "qubits": [
+                0,
+                1
+              ],
+              "params": [
+                "0.5*\u03f4"
+              ]
+            },
+            {
+              "name": "rz",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "-\u03b2"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "y",
+      "num_qubits": 1,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "u",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "3.141592653589793",
+                "1.5707963267948966",
+                "1.5707963267948966"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "4.71238898038469",
+          "instructions": [
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "global_phase": "1.5707963267948966",
+          "instructions": [
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "h",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "global_phase": "1.5707963267948966",
+          "instructions": [
+            {
+              "name": "z",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "x",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "global_phase": "1.5707963267948966",
+          "instructions": [
+            {
+              "name": "ry",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "3.141592653589793"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "z",
+      "num_qubits": 1,
+      "source_params": [],
+      "equivalences": [
+        {
+          "index": 0,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "p",
+              "qubits": [
+                0
+              ],
+              "params": [
+                "3.141592653589793"
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "s",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "global_phase": "0.0",
+          "instructions": [
+            {
+              "name": "sdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "sdg",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "global_phase": "1.5707963267948966",
+          "instructions": [
+            {
+              "name": "x",
+              "qubits": [
+                0
+              ],
+              "params": []
+            },
+            {
+              "name": "y",
+              "qubits": [
+                0
+              ],
+              "params": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
