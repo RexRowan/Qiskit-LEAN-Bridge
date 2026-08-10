@@ -8482,4 +8482,317 @@ trace: .> LEAN_PATH=/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Cli/.lake
 trace: .> LEAN_PATH=/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Cli/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/batteries/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Qq/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/aesop/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/plausible/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/build/lib/lean /home/codespace/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean /workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/Quantumlib/Data/Gate/Pauli.lean -o /workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/.lake/build/lib/lean/Quantumlib/Data/Gate/Pauli.olean -i /workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/.lake/build/lib/lean/Quantumlib/Data/Gate/Pauli.ilean -c /workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/.lake/build/ir/Quantumlib/Data/Gate/Pauli.c --setup /workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/.lake/build/ir/Quantumlib/Data/Gate/Pauli.setup.json --jℹ ℹ [8341/8345] Built Quantumlib.Data.Gate.Basic (994s)
 trace: .> LEAN_PATH=/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Cli/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/batteries/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Qq/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/aesop/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/plausible/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/build/lib/lean /home/codespace/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean /workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/Quantumlib/Data/Gate/Basic.lean -o /workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/.lake/build/lib/lean/Quantumlib/Data/Gate/Basic.olean -i /workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/.lake/build/lib/lean/Quantumlib/Data/Gate/Basic.ilean -c /workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/.lake/build/ir/Quantumlib/Data/Gate/Basic.c --setup /workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/.lake/build/ir/Quantumlib/Data/Gate/Basic.setup.json --jℹ [8342/8345] Built Quantumlib.Data.Gate.Equivs (876s)
 trace: .> LEAN_PATH=/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Cli/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/batteries/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Qq/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/aesop/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/plausible/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/build/lib/lean /home/codespace/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean /workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/Quantumlib/Data/Gate/Equivs.lean -o /workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/.lake/build/lib/lean/Quantumlib/Data/Gate/Equivs.olean -i /workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/.lake/build/lib/lean/Quantumlib/Data/Gate/Equivs.ilean -c /workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/.lake/build/ir/Quantumlib/Data/Gate/Equivs.c --setup /workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/.lake/build/ir/Quantumlib/Data/Gate/Equivs.setup.json --json
-son
+✖ ✖ [8343/8345] Building QiskitEquiv.Generated (863s)
+trace: .> LEAN_PATH=/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Cli/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/batteries/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Qq/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/aesop/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/plausible/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/build/lib/lean /home/codespace/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean /workspaces/Qiskit-LEAN-Bridge/lean/QiskitEquiv/Generated.lean -o /workspaces/Qiskit-LEAN-Bridge/lean/.lake/build/lib/lean/QiskitEquiv/Generated.olean -i /workspaces/Qiskit-LEAN-Bridge/lean/.lake/build/lib/lean/QiskitEquiv/Generated.ilean -c /workspaces/Qiskit-LEAN-Bridge/lean/.lake/build/ir/QiskitEquiv/Generated.c --setup /workspaces/Qiskit-LEAN-Bridge/lean/.lake/build/ir/QiskitEquiv/Generated.setup.json --json
+error: QiskitEquiv/Generated.lean:401:22: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:401:26: Function expected at
+  2
+but this term has type
+  ?m.8
+
+Note: Expected a function because this term is being applied to the argument
+  0
+error: QiskitEquiv/Generated.lean:408:23: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:408:32: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:415:34: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:427:29: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:427:60: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:427:76: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+warning: QiskitEquiv/Generated.lean:441:6: declaration uses `sorry`
+warning: QiskitEquiv/Generated.lean:448:6: declaration uses `sorry`
+warning: QiskitEquiv/Generated.lean:455:6: declaration uses `sorry`
+warning: QiskitEquiv/Generated.lean:463:6: declaration uses `sorry`
+warning: QiskitEquiv/Generated.lean:481:6: declaration uses `sorry`
+warning: QiskitEquiv/Generated.lean:489:6: declaration uses `sorry`
+warning: QiskitEquiv/Generated.lean:524:6: declaration uses `sorry`
+error: QiskitEquiv/Generated.lean:565:30: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:606:18: unexpected token 'λ'; expected '_' or identifier
+error: QiskitEquiv/Generated.lean:620:18: unexpected token 'λ'; expected '_' or identifier
+error: QiskitEquiv/Generated.lean:686:23: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+warning: QiskitEquiv/Generated.lean:691:6: declaration uses `sorry`
+error: QiskitEquiv/Generated.lean:702:18: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:702:40: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:702:28: failed to synthesize instance of type class
+  HSub (ℝ → CSquare 2) ℕ (CSquare 2)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: QiskitEquiv/Generated.lean:709:18: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:716:18: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:723:18: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:731:18: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:731:42: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:731:66: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:764:26: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:764:63: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:764:98: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:771:26: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:771:57: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:792:23: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:800:26: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:800:50: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:810:18: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:810:40: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:810:28: failed to synthesize instance of type class
+  HSub (ℝ → CSquare 2) ℕ (CSquare 2)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: QiskitEquiv/Generated.lean:817:18: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:840:18: unexpected token 'λ'; expected '_' or identifier
+error: QiskitEquiv/Generated.lean:849:18: unexpected token 'λ'; expected '_' or identifier
+error: QiskitEquiv/Generated.lean:859:24: unexpected token ','; expected ':'
+error: QiskitEquiv/Generated.lean:868:24: unexpected token ','; expected ':'
+error: QiskitEquiv/Generated.lean:893:16: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:893:20: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+warning: QiskitEquiv/Generated.lean:898:6: declaration uses `sorry`
+error: QiskitEquiv/Generated.lean:905:23: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:911:23: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:911:54: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:960:16: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:960:18: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:960:9: failed to synthesize instance of type class
+  HDiv (ℝ → CSquare 2) ℕ (CSquare 2)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: QiskitEquiv/Generated.lean:960:22: Function expected at
+  2
+but this term has type
+  ?m.17
+
+Note: Expected a function because this term is being applied to the argument
+  π
+error: QiskitEquiv/Generated.lean:966:28: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:972:23: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:978:23: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:984:23: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:984:54: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:993:20: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+warning: QiskitEquiv/Generated.lean:998:6: declaration uses `sorry`
+error: QiskitEquiv/Generated.lean:1006:23: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:1006:47: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: QiskitEquiv/Generated.lean:1012:23: Ambiguous term
+  π
+Possible interpretations:
+  π : ℝ
+  
+  π : ℝ
+error: Lean exited with code 1
+✔ [8344/8345] Ran QiskitEquiv
+✔ [8345/8345] Ran qiskit_equiv/QiskitEquiv:default
+Some required targets logged failures:
+- QiskitEquiv.Generaerror: build failed
+led
