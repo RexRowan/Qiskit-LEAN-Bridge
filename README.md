@@ -1,4 +1,4 @@
-# qiskit-lean-bridge
+# Qiskit LEAN bridge
 
 Bridges Qiskit's `StandardEquivalenceLibrary` (the gate identities the
 transpiler relies on) to formally verified proofs in
