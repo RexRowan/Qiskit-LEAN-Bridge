@@ -1,16 +1,14 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["5e8d2d646a8daa84.olean"],
+ {"o": ["5cd202afe8541c6c.olean"],
   "m": false,
-  "i": "6efad103d0441321.ilean",
+  "i": "ba9a49b74701caa5.ilean",
   "c": "1b6401a67c01edc5.c"},
  "log":
  [{"message":
    ".> LEAN_PATH=/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Cli/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/batteries/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Qq/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/aesop/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/importGraph/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/plausible/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/mathlib/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/packages/Quantumlib/.lake/build/lib/lean:/workspaces/Qiskit-LEAN-Bridge/lean/.lake/build/lib/lean /home/codespace/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean /workspaces/Qiskit-LEAN-Bridge/lean/QiskitEquiv/Generated.lean -o /workspaces/Qiskit-LEAN-Bridge/lean/.lake/build/lib/lean/QiskitEquiv/Generated.olean -i /workspaces/Qiskit-LEAN-Bridge/lean/.lake/build/lib/lean/QiskitEquiv/Generated.ilean -c /workspaces/Qiskit-LEAN-Bridge/lean/.lake/build/ir/QiskitEquiv/Generated.c --setup /workspaces/Qiskit-LEAN-Bridge/lean/.lake/build/ir/QiskitEquiv/Generated.setup.json --json",
    "level": "trace"},
-  {"message": "QiskitEquiv/Generated.lean:405:6: declaration uses `sorry`",
-   "level": "warning"},
   {"message": "QiskitEquiv/Generated.lean:412:6: declaration uses `sorry`",
    "level": "warning"},
   {"message": "QiskitEquiv/Generated.lean:419:6: declaration uses `sorry`",
@@ -126,10 +124,10 @@
   ["Lean 4.30.0, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc",
    "2c8d2623007dfc36"],
   ["/workspaces/Qiskit-LEAN-Bridge/lean/QiskitEquiv/Generated.lean",
-   "57558dc6acefa885"],
+   "57b6e2d5e7e01083"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
   ["Module.name: QiskitEquiv.Generated", "bcad20a41735ea5f"],
   ["Package.id?: (some qiskit_equiv)", "99cb92839dfccbcd"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "6b5a2882ee9f7227"}
+ "depHash": "4a50702e07fa71fc"}
