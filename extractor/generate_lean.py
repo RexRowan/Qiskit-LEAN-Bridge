@@ -35,6 +35,8 @@ import json
 import sys
 from pathlib import Path
 
+import re
+
 from leanquantum_mapping import GateMapping, resolve
 
 import math
@@ -72,7 +74,12 @@ def pi_aware_literal(value: str) -> str:
             if den == 1:
                 return f"{sign}({num} * π)" if num != 1 else f"{sign}π"
             core = f"π / {den}" if num == 1 else f"({num} * π / {den})"
-            return f"{sign}{core}"
+            result = f"{sign}{core}"
+            # always fully parenthesize compound results -- callers splice
+            # this into multi-argument applications (`rotate {p0} {p1} {p2}`)
+            # and `*`-joined products, where an unparenthesized `π / 2`
+            # silently changes operator precedence (see substitute_params).
+            return result if den == 1 and num == 1 and not sign else f"({result})"
     # Not a recognizable pi-multiple -- flag it loudly rather than emit a
     # silently-wrong decimal literal.
     return f"(sorryAx ℝ /- UNRECOGNIZED ANGLE {value}, NOT a clean pi-multiple, needs manual review -/)"
@@ -100,31 +107,108 @@ import Quantumlib.Data.Gate.Equivs
 
 namespace QiskitEquiv
 
-open Real (pi)
-local notation "π" => Real.pi
+-- NOTE: do NOT redeclare `π` notation here. LeanQuantum's own
+-- Quantumlib/ForMathlib/Data/Complex/Basic.lean already declares
+-- `notation "π" => Real.pi` globally (not `local`/`scoped`), pulled in
+-- transitively via the imports above. Redeclaring it here creates a
+-- second, competing notation for the same symbol, which is exactly what
+-- produced every "Ambiguous term" elaboration error in the first
+-- generated build -- Lean can't tell which `π` you mean.
 
 '''
+
+
+RESERVED_LEAN_TOKENS = {"λ": "lam", "Σ": "sigma", "Π": "piParam", "fun": "funParam"}
+
+
+def safe_ident(name: str) -> str:
+    """Rename any Qiskit parameter name that collides with a reserved Lean
+    4 token (most commonly 'λ', which Lean parses as lambda-abstraction
+    syntax, not an identifier)."""
+    return RESERVED_LEAN_TOKENS.get(name, name)
+
+
+def parenthesize_if_compound(expr: str) -> str:
+    """Wrap an expression in parens unless it's already a single atomic
+    token (bare identifier/number) or already parenthesized. Substituting
+    a compound expression (anything with +, -, *, /, spaces) into a
+    multi-argument application like `rotate {p0} {p1} {p2}` or into a
+    `*`-joined product of gate terms is a correctness bug, not a style
+    choice: `rotate π / 2 0 π` parses as `(rotate π) / 2 0 π`, and an
+    unparenthesized `phaseShift -π/2 + λ` sitting next to a `*` separator
+    silently turns a gate *product* into an addition.
+    """
+    stripped = expr.strip()
+    if stripped.startswith("(") and stripped.endswith(")"):
+        return stripped
+    # atomic: single identifier or bare number, no internal whitespace/operators
+    if re.fullmatch(r"[A-Za-z_][A-Za-z0-9_'ϴθφλδπ]*", stripped) or re.fullmatch(
+        r"-?[0-9]+(\.[0-9]+)?", stripped
+    ):
+        return stripped
+    return f"({stripped})"
+
+
+_EMBEDDED_DECIMAL_RE = re.compile(r"-?[0-9]+\.[0-9]+")
+
+
+def _looks_like_computed_float(token: str) -> bool:
+    """Distinguish a plausibly-computed irrational approximation (e.g.
+    Qiskit's "1.5707963267948966" for pi/2) from a short, exact, hand-
+    written rational coefficient (e.g. "0.5" or "-0.5" in "(-0.5)*θ",
+    which literally means -1/2 and must NOT be pi-converted or otherwise
+    altered). Only decimals with enough digits to plausibly be a float64
+    computation get routed through pi_aware_literal; short clean decimals
+    are left as exact Lean real-number literals, which is what they are.
+    """
+    frac_part = token.split(".", 1)[1] if "." in token else ""
+    return len(frac_part) >= 6
+
+
+def embedded_pi_substitute(expr: str) -> str:
+    def _repl(m: re.Match) -> str:
+        tok = m.group(0)
+        return pi_aware_literal(tok) if _looks_like_computed_float(tok) else tok
+    return _EMBEDDED_DECIMAL_RE.sub(_repl, expr)
 
 
 def substitute_params(expr: str, params: list[str]) -> str:
     """Fill {p0}, {p1}, ... placeholders with extracted parameter strings.
 
     Qiskit parameter expressions come through as Python-syntax strings
-    (e.g. "0.5*θ", "(-0.5)*θ"); Lean uses the same infix operators for
-    ℝ, so a direct substitution is valid for the linear expressions the
-    standard library actually uses. This would need a real expression
-    parser if a future equivalence used something more exotic.
+    (e.g. "0.5*θ", "(-0.5)*θ", or mixed symbolic+numeric like
+    "-1.5707963267948966 + λ"). Two correctness-critical steps happen
+    here, not just string pasting:
+      1. Any raw decimal literal *within* the expression that's a clean
+         pi-multiple gets rewritten symbolically (pi_aware_literal),
+         including when it's embedded inside a larger symbolic expression
+         -- a bare 1.5707963267948966 next to a symbolic λ is just as
+         wrong as one on its own.
+      2. Any reserved Lean token used as a Qiskit parameter name (only
+         'λ' shows up in the standard library) gets renamed, and the
+         whole substituted piece gets parenthesized before splicing into
+         the target expression -- required for correctness whenever it's
+         going into a multi-argument application or a `*`-joined product.
     """
     out = expr
     for i, p in enumerate(params):
         cleaned = p.replace("(-0.5)*", "-0.5*")
-        # if it's a bare numeric literal (no symbolic variable), route
-        # through the pi-multiple detector rather than paste the decimal.
-        try:
-            float(cleaned)
+
+        # rename reserved identifiers (λ -> lam) as a whole-token match
+        for bad, good in RESERVED_LEAN_TOKENS.items():
+            cleaned = re.sub(rf"(?<![A-Za-z0-9_]){re.escape(bad)}(?![A-Za-z0-9_])", good, cleaned)
+
+        if re.fullmatch(r"-?[0-9]+(\.[0-9]+)?", cleaned):
+            # whole thing is a bare numeric literal
             cleaned = pi_aware_literal(cleaned)
-        except ValueError:
-            pass  # symbolic expression like "0.5*θ" -- leave as-is
+        else:
+            # mixed/symbolic expression -- still rewrite any embedded
+            # decimal-pi-multiple tokens within it (e.g. the numeric part
+            # of "-1.5707963267948966 + λ"), then parenthesize the whole
+            # substituted piece since it's compound.
+            cleaned = embedded_pi_substitute(cleaned)
+            cleaned = parenthesize_if_compound(cleaned)
+
         out = out.replace(f"{{p{i}}}", cleaned)
     return out
 
@@ -190,17 +274,18 @@ def render_equivalence(gate: dict, eq: dict) -> str:
 
     # direct or derived: emit a real (sorry'd) lemma statement.
     src = source_mapping.lean_expr or "sorry"  # source is guaranteed non-None here
-    src_params = [str(p) for p in gate.get("source_params", [])]
-    lean_src_params = ", ".join(f"({p} : ℝ)" for p in src_params)
+    src_params = [safe_ident(str(p)) for p in gate.get("source_params", [])]
+    lean_src_params = " ".join(f"({p} : ℝ)" for p in src_params)  # SPACE-separated binder groups, not comma
     binder = f" {lean_src_params}" if lean_src_params else ""
     if src_params:
-        # source_params are the SYMBOLIC names Qiskit used (e.g. θ); the
-        # matched LeanQuantum expr already uses {p0} substitution keyed
-        # off the SAME positions in the *equivalent circuit's* gates, but
-        # the LHS gate itself also needs its own symbolic param named.
+        # source_params are the SYMBOLIC names Qiskit used (e.g. θ, renamed
+        # via safe_ident if reserved); the matched LeanQuantum expr already
+        # uses {p0} substitution keyed off the SAME positions, but each
+        # substituted name must be parenthesized before splicing into a
+        # multi-argument call for the same precedence reason as elsewhere.
         src_expr = source_mapping.lean_expr
         for i, p in enumerate(src_params):
-            src_expr = src_expr.replace(f"{{p{i}}}", p)
+            src_expr = src_expr.replace(f"{{p{i}}}", parenthesize_if_compound(p))
     else:
         src_expr = src
 
@@ -216,7 +301,15 @@ def render_equivalence(gate: dict, eq: dict) -> str:
         phase_lit = pi_aware_literal(gp_str)
         rhs_terms = f"(Complex.exp ({phase_lit} * Complex.I)) • ({rhs_terms})"
     elif gp_val is None:
-        rhs_terms = f"(Complex.exp (({gp_str}) * Complex.I)) • ({rhs_terms})"
+        # symbolic global phase (e.g. "(-0.5)*λ") -- needs the same
+        # reserved-token renaming and embedded-decimal-pi cleanup as any
+        # other substituted expression, or it'll hit the exact 'λ' parse
+        # error and silent-decimal-π issues fixed above.
+        cleaned_gp = gp_str
+        for bad, good in RESERVED_LEAN_TOKENS.items():
+            cleaned_gp = re.sub(rf"(?<![A-Za-z0-9_]){re.escape(bad)}(?![A-Za-z0-9_])", good, cleaned_gp)
+        cleaned_gp = embedded_pi_substitute(cleaned_gp)
+        rhs_terms = f"(Complex.exp ({parenthesize_if_compound(cleaned_gp)} * Complex.I)) • ({rhs_terms})"
         notes.append(f"symbolic global_phase '{gp_str}' -- verify this substitution parses.")
 
     status_tag = "TODO_PROOF (direct mapping)" if worst_status == "direct" else "TODO_PROOF (derived -- needs helper lemma first)"

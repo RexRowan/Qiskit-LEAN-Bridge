@@ -19,8 +19,13 @@ import Quantumlib.Data.Gate.Equivs
 
 namespace QiskitEquiv
 
-open Real (pi)
-local notation "π" => Real.pi
+-- NOTE: do NOT redeclare `π` notation here. LeanQuantum's own
+-- Quantumlib/ForMathlib/Data/Complex/Basic.lean already declares
+-- `notation "π" => Real.pi` globally (not `local`/`scoped`), pulled in
+-- transitively via the imports above. Redeclaring it here creates a
+-- second, competing notation for the same symbol, which is exactly what
+-- produced every "Ambiguous term" elaboration error in the first
+-- generated build -- Lean can't tell which `π` you mean.
 
 
 /- ===== c3sx (4 qubit(s)) ===== -/
@@ -398,7 +403,7 @@ local notation "π" => Real.pi
 -- TODO_PROOF (direct mapping)
 --   note: u: Verified: Qiskit U(theta,phi,lambda) == LeanQuantum rotate(theta,phi,delta) exactly, param-for-param, no phase correction. This is the load-bearing identity: most other single-qubit equivalences bottom out at U.
 lemma h_equiv_0 :
-    hadamard = rotate π / 2 0 π := by
+    hadamard = rotate (π / 2) 0 π := by
   sorry
 
 -- h equivalence #1 (1 instruction(s), global_phase=0.0)
@@ -412,7 +417,7 @@ lemma h_equiv_1 :
 -- TODO_PROOF (direct mapping)
 --   note: sx: Verified: Qiskit SXGate() == LeanQuantum sqrtx exactly, no global phase correction needed (checked numerically).
 lemma h_equiv_2 :
-    hadamard = (Complex.exp ((7 * π / 4) * Complex.I)) • (sGate * sqrtx * sGate) := by
+    hadamard = (Complex.exp (((7 * π / 4)) * Complex.I)) • (sGate * sqrtx * sGate) := by
   sorry
 
 -- h equivalence #3 (3 instruction(s), global_phase=0.7853981633974483)
@@ -424,7 +429,7 @@ lemma h_equiv_2 :
 -- h equivalence #4 (2 instruction(s), global_phase=1.5707963267948966)
 -- TODO_PROOF (direct mapping)
 lemma h_equiv_4 :
-    hadamard = (Complex.exp (π / 2 * Complex.I)) • (yRotate π / 2 * xRotate π) := by
+    hadamard = (Complex.exp ((π / 2) * Complex.I)) • (yRotate (π / 2) * xRotate π) := by
   sorry
 
 -- h equivalence #5 (2 instruction(s), global_phase=1.5707963267948966)
@@ -479,7 +484,7 @@ lemma id_equiv_3 :
 --   note: u1: u1(lambda) = p(lambda), same as p.
 --   note: p (source): Verified: Qiskit PhaseGate(lambda) == phaseShift(lambda) exactly.
 lemma p_equiv_0 (ϴ : ℝ) :
-    phaseShift ϴ = phaseShift ϴ := by
+    phaseShift (ϴ) = phaseShift (ϴ) := by
   sorry
 
 -- p equivalence #1 (1 instruction(s), global_phase=0.0)
@@ -487,7 +492,7 @@ lemma p_equiv_0 (ϴ : ℝ) :
 --   note: u: Verified: Qiskit U(theta,phi,lambda) == LeanQuantum rotate(theta,phi,delta) exactly, param-for-param, no phase correction. This is the load-bearing identity: most other single-qubit equivalences bottom out at U.
 --   note: p (source): Verified: Qiskit PhaseGate(lambda) == phaseShift(lambda) exactly.
 lemma p_equiv_1 (ϴ : ℝ) :
-    phaseShift ϴ = rotate 0 0 ϴ := by
+    phaseShift (ϴ) = rotate 0 0 (ϴ) := by
   sorry
 
 /- ===== r (1 qubit(s)) ===== -/
@@ -522,7 +527,7 @@ lemma p_equiv_1 (ϴ : ℝ) :
 -- TODO_PROOF (derived -- needs helper lemma first)
 --   note: rz: Verified: Qiskit RZGate(theta) == exp(-i*theta/2) * phaseShift(theta) exactly. Needs a `rzGate` def (or a scalar-multiple lemma) in LeanQuantum before equivalence lemmas can cite it directly.
 lemma rx_equiv_0 (ϴ : ℝ) :
-    xRotate ϴ = hadamard * phaseShift ϴ * hadamard := by
+    xRotate (ϴ) = hadamard * phaseShift (ϴ) * hadamard := by
   sorry
 
 -- rx equivalence #1 (1 instruction(s), global_phase=0.0)
@@ -562,7 +567,7 @@ lemma rx_equiv_0 (ϴ : ℝ) :
 -- TODO_PROOF (derived -- needs helper lemma first)
 --   note: sdg: = sGate⁻¹; sGate is unitary so sGate⁻¹ = sGateᴴ. Either prove via phaseShift_mul_phaseShift or add sdgGate.
 lemma ry_equiv_1 (ϴ : ℝ) :
-    yRotate ϴ = phaseShift (-(π / 2)) * xRotate ϴ * sGate := by
+    yRotate (ϴ) = phaseShift (-(π / 2)) * xRotate (ϴ) * sGate := by
   sorry
 
 /- ===== ryy (2 qubit(s)) ===== -/
@@ -603,8 +608,8 @@ lemma ry_equiv_1 (ϴ : ℝ) :
 --   note: p: Verified: Qiskit PhaseGate(lambda) == phaseShift(lambda) exactly.
 --   note: rz (source): Verified: Qiskit RZGate(theta) == exp(-i*theta/2) * phaseShift(theta) exactly. Needs a `rzGate` def (or a scalar-multiple lemma) in LeanQuantum before equivalence lemmas can cite it directly.
 --   note: symbolic global_phase '(-0.5)*λ' -- verify this substitution parses.
-lemma rz_equiv_0 (λ : ℝ) :
-    phaseShift λ = (Complex.exp (((-0.5)*λ) * Complex.I)) • (phaseShift λ) := by
+lemma rz_equiv_0 (lam : ℝ) :
+    phaseShift lam = (Complex.exp (((-0.5)*lam) * Complex.I)) • (phaseShift lam) := by
   sorry
 
 -- rz equivalence #1 (3 instruction(s), global_phase=0.0)
@@ -617,8 +622,8 @@ lemma rz_equiv_0 (λ : ℝ) :
 -- rz equivalence #2 (3 instruction(s), global_phase=0.0)
 -- TODO_PROOF (derived -- needs helper lemma first)
 --   note: rz (source): Verified: Qiskit RZGate(theta) == exp(-i*theta/2) * phaseShift(theta) exactly. Needs a `rzGate` def (or a scalar-multiple lemma) in LeanQuantum before equivalence lemmas can cite it directly.
-lemma rz_equiv_2 (λ : ℝ) :
-    phaseShift λ = hadamard * xRotate λ * hadamard := by
+lemma rz_equiv_2 (lam : ℝ) :
+    phaseShift lam = hadamard * xRotate lam * hadamard := by
   sorry
 
 /- ===== rzx (2 qubit(s)) ===== -/
@@ -683,7 +688,7 @@ lemma rz_equiv_2 (λ : ℝ) :
 -- TODO_PROOF (direct mapping)
 --   note: p: Verified: Qiskit PhaseGate(lambda) == phaseShift(lambda) exactly.
 lemma s_equiv_0 :
-    sGate = phaseShift π / 2 := by
+    sGate = phaseShift (π / 2) := by
   sorry
 
 -- s equivalence #1 (2 instruction(s), global_phase=0.0)
@@ -699,7 +704,7 @@ lemma s_equiv_1 :
 --   note: p: Verified: Qiskit PhaseGate(lambda) == phaseShift(lambda) exactly.
 --   note: sdg (source): = sGate⁻¹; sGate is unitary so sGate⁻¹ = sGateᴴ. Either prove via phaseShift_mul_phaseShift or add sdgGate.
 lemma sdg_equiv_0 :
-    phaseShift (-(π / 2)) = phaseShift -π / 2 := by
+    phaseShift (-(π / 2)) = phaseShift (-π / 2) := by
   sorry
 
 -- sdg equivalence #1 (2 instruction(s), global_phase=0.0)
@@ -761,14 +766,14 @@ lemma sdg_equiv_4 :
 --   note: sdg: = sGate⁻¹; sGate is unitary so sGate⁻¹ = sGateᴴ. Either prove via phaseShift_mul_phaseShift or add sdgGate.
 --   note: sx (source): Verified: Qiskit SXGate() == LeanQuantum sqrtx exactly, no global phase correction needed (checked numerically).
 lemma sx_equiv_0 :
-    sqrtx = (Complex.exp (π / 4 * Complex.I)) • (phaseShift (-(π / 2)) * hadamard * phaseShift (-(π / 2))) := by
+    sqrtx = (Complex.exp ((π / 4) * Complex.I)) • (phaseShift (-(π / 2)) * hadamard * phaseShift (-(π / 2))) := by
   sorry
 
 -- sx equivalence #1 (1 instruction(s), global_phase=0.7853981633974483)
 -- TODO_PROOF (direct mapping)
 --   note: sx (source): Verified: Qiskit SXGate() == LeanQuantum sqrtx exactly, no global phase correction needed (checked numerically).
 lemma sx_equiv_1 :
-    sqrtx = (Complex.exp (π / 4 * Complex.I)) • (xRotate π / 2) := by
+    sqrtx = (Complex.exp ((π / 4) * Complex.I)) • (xRotate (π / 2)) := by
   sorry
 
 /- ===== sxdg (1 qubit(s)) ===== -/
@@ -789,7 +794,7 @@ lemma sx_equiv_1 :
 -- TODO_PROOF (direct mapping)
 --   note: p: Verified: Qiskit PhaseGate(lambda) == phaseShift(lambda) exactly.
 lemma t_equiv_0 :
-    tGate = phaseShift π / 4 := by
+    tGate = phaseShift (π / 4) := by
   sorry
 
 -- t equivalence #1 (3 instruction(s), global_phase=0.0)
@@ -807,7 +812,7 @@ lemma t_equiv_1 :
 --   note: p: Verified: Qiskit PhaseGate(lambda) == phaseShift(lambda) exactly.
 --   note: tdg (source): Same pattern as sdg.
 lemma tdg_equiv_0 :
-    phaseShift (-(π / 4)) = phaseShift -π / 4 := by
+    phaseShift (-(π / 4)) = phaseShift (-π / 4) := by
   sorry
 
 -- tdg equivalence #1 (3 instruction(s), global_phase=0.0)
@@ -837,8 +842,8 @@ lemma tdg_equiv_1 :
 -- TODO_PROOF (direct mapping)
 --   note: p: Verified: Qiskit PhaseGate(lambda) == phaseShift(lambda) exactly.
 --   note: u1 (source): u1(lambda) = p(lambda), same as p.
-lemma u1_equiv_1 (λ : ℝ) :
-    phaseShift λ = phaseShift λ := by
+lemma u1_equiv_1 (lam : ℝ) :
+    phaseShift lam = phaseShift lam := by
   sorry
 
 -- u1 equivalence #2 (1 instruction(s), global_phase=0.5*λ)
@@ -846,8 +851,8 @@ lemma u1_equiv_1 (λ : ℝ) :
 --   note: rz: Verified: Qiskit RZGate(theta) == exp(-i*theta/2) * phaseShift(theta) exactly. Needs a `rzGate` def (or a scalar-multiple lemma) in LeanQuantum before equivalence lemmas can cite it directly.
 --   note: u1 (source): u1(lambda) = p(lambda), same as p.
 --   note: symbolic global_phase '0.5*λ' -- verify this substitution parses.
-lemma u1_equiv_2 (λ : ℝ) :
-    phaseShift λ = (Complex.exp ((0.5*λ) * Complex.I)) • (phaseShift λ) := by
+lemma u1_equiv_2 (lam : ℝ) :
+    phaseShift lam = (Complex.exp ((0.5*lam) * Complex.I)) • (phaseShift lam) := by
   sorry
 
 /- ===== u2 (1 qubit(s)) ===== -/
@@ -856,8 +861,8 @@ lemma u1_equiv_2 (λ : ℝ) :
 -- TODO_PROOF (direct mapping)
 --   note: u: Verified: Qiskit U(theta,phi,lambda) == LeanQuantum rotate(theta,phi,delta) exactly, param-for-param, no phase correction. This is the load-bearing identity: most other single-qubit equivalences bottom out at U.
 --   note: u2 (source): u2(phi,lam) = U(pi/2, phi, lam).
-lemma u2_equiv_0 (φ : ℝ), (λ : ℝ) :
-    rotate (π / 2) φ λ = rotate π / 2 φ λ := by
+lemma u2_equiv_0 (φ : ℝ) (lam : ℝ) :
+    rotate (π / 2) (φ) lam = rotate (π / 2) (φ) lam := by
   sorry
 
 -- u2 equivalence #1 (3 instruction(s), global_phase=5.497787143782138)
@@ -865,8 +870,8 @@ lemma u2_equiv_0 (φ : ℝ), (λ : ℝ) :
 --   note: u1: u1(lambda) = p(lambda), same as p.
 --   note: sx: Verified: Qiskit SXGate() == LeanQuantum sqrtx exactly, no global phase correction needed (checked numerically).
 --   note: u2 (source): u2(phi,lam) = U(pi/2, phi, lam).
-lemma u2_equiv_1 (φ : ℝ), (λ : ℝ) :
-    rotate (π / 2) φ λ = (Complex.exp ((7 * π / 4) * Complex.I)) • (phaseShift -1.5707963267948966 + λ * sqrtx * phaseShift 1.5707963267948966 + φ) := by
+lemma u2_equiv_1 (φ : ℝ) (lam : ℝ) :
+    rotate (π / 2) (φ) lam = (Complex.exp (((7 * π / 4)) * Complex.I)) • (phaseShift ((-π / 2) + lam) * sqrtx * phaseShift ((π / 2) + φ)) := by
   sorry
 
 /- ===== u3 (1 qubit(s)) ===== -/
@@ -902,13 +907,13 @@ lemma x_equiv_1 :
 -- x equivalence #2 (2 instruction(s), global_phase=1.5707963267948966)
 -- TODO_PROOF (direct mapping)
 lemma x_equiv_2 :
-    σx = (Complex.exp (π / 2 * Complex.I)) • (σy * σz) := by
+    σx = (Complex.exp ((π / 2) * Complex.I)) • (σy * σz) := by
   sorry
 
 -- x equivalence #3 (1 instruction(s), global_phase=1.5707963267948966)
 -- TODO_PROOF (direct mapping)
 lemma x_equiv_3 :
-    σx = (Complex.exp (π / 2 * Complex.I)) • (xRotate π) := by
+    σx = (Complex.exp ((π / 2) * Complex.I)) • (xRotate π) := by
   sorry
 
 /- ===== xx_minus_yy (2 qubit(s)) ===== -/
@@ -957,31 +962,31 @@ lemma x_equiv_3 :
 -- TODO_PROOF (direct mapping)
 --   note: u: Verified: Qiskit U(theta,phi,lambda) == LeanQuantum rotate(theta,phi,delta) exactly, param-for-param, no phase correction. This is the load-bearing identity: most other single-qubit equivalences bottom out at U.
 lemma y_equiv_0 :
-    σy = rotate π π / 2 π / 2 := by
+    σy = rotate π (π / 2) (π / 2) := by
   sorry
 
 -- y equivalence #1 (6 instruction(s), global_phase=4.71238898038469)
 -- TODO_PROOF (direct mapping)
 lemma y_equiv_1 :
-    σy = (Complex.exp ((3 * π / 2) * Complex.I)) • (hadamard * sGate * sGate * hadamard * sGate * sGate) := by
+    σy = (Complex.exp (((3 * π / 2)) * Complex.I)) • (hadamard * sGate * sGate * hadamard * sGate * sGate) := by
   sorry
 
 -- y equivalence #2 (6 instruction(s), global_phase=1.5707963267948966)
 -- TODO_PROOF (direct mapping)
 lemma y_equiv_2 :
-    σy = (Complex.exp (π / 2 * Complex.I)) • (sGate * sGate * hadamard * sGate * sGate * hadamard) := by
+    σy = (Complex.exp ((π / 2) * Complex.I)) • (sGate * sGate * hadamard * sGate * sGate * hadamard) := by
   sorry
 
 -- y equivalence #3 (2 instruction(s), global_phase=1.5707963267948966)
 -- TODO_PROOF (direct mapping)
 lemma y_equiv_3 :
-    σy = (Complex.exp (π / 2 * Complex.I)) • (σz * σx) := by
+    σy = (Complex.exp ((π / 2) * Complex.I)) • (σz * σx) := by
   sorry
 
 -- y equivalence #4 (1 instruction(s), global_phase=1.5707963267948966)
 -- TODO_PROOF (direct mapping)
 lemma y_equiv_4 :
-    σy = (Complex.exp (π / 2 * Complex.I)) • (yRotate π) := by
+    σy = (Complex.exp ((π / 2) * Complex.I)) • (yRotate π) := by
   sorry
 
 /- ===== z (1 qubit(s)) ===== -/
@@ -1009,7 +1014,7 @@ lemma z_equiv_2 :
 -- z equivalence #3 (2 instruction(s), global_phase=1.5707963267948966)
 -- TODO_PROOF (direct mapping)
 lemma z_equiv_3 :
-    σz = (Complex.exp (π / 2 * Complex.I)) • (σx * σy) := by
+    σz = (Complex.exp ((π / 2) * Complex.I)) • (σx * σy) := by
   sorry
 
 
