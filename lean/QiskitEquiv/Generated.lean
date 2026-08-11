@@ -445,21 +445,21 @@ lemma h_equiv_4 :
 --   note: id (source): Identity matrix, Mathlib's `1 : CSquare 2`.
 lemma id_equiv_0 :
     1 = rotate 0 0 0 := by
-  sorry
+  exact rotate_one.symm
 
 -- id equivalence #1 (1 instruction(s), global_phase=0.0)
 -- TODO_PROOF (direct mapping)
 --   note: id (source): Identity matrix, Mathlib's `1 : CSquare 2`.
 lemma id_equiv_1 :
     1 = xRotate 0 := by
-  sorry
+  solve_matrix [xRotate]
 
 -- id equivalence #2 (1 instruction(s), global_phase=0.0)
 -- TODO_PROOF (direct mapping)
 --   note: id (source): Identity matrix, Mathlib's `1 : CSquare 2`.
 lemma id_equiv_2 :
     1 = yRotate 0 := by
-  sorry
+  solve_matrix [yRotate]
 
 -- id equivalence #3 (1 instruction(s), global_phase=0.0)
 -- TODO_PROOF (derived -- needs helper lemma first)
@@ -467,7 +467,7 @@ lemma id_equiv_2 :
 --   note: id (source): Identity matrix, Mathlib's `1 : CSquare 2`.
 lemma id_equiv_3 :
     1 = phaseShift 0 := by
-  sorry
+  exact phaseShift_zero.symm
 
 /- ===== iswap (2 qubit(s)) ===== -/
 
@@ -485,7 +485,7 @@ lemma id_equiv_3 :
 --   note: p (source): Verified: Qiskit PhaseGate(lambda) == phaseShift(lambda) exactly.
 lemma p_equiv_0 (ϴ : ℝ) :
     phaseShift (ϴ) = phaseShift (ϴ) := by
-  sorry
+  rfl
 
 -- p equivalence #1 (1 instruction(s), global_phase=0.0)
 -- TODO_PROOF (direct mapping)
@@ -493,7 +493,7 @@ lemma p_equiv_0 (ϴ : ℝ) :
 --   note: p (source): Verified: Qiskit PhaseGate(lambda) == phaseShift(lambda) exactly.
 lemma p_equiv_1 (ϴ : ℝ) :
     phaseShift (ϴ) = rotate 0 0 (ϴ) := by
-  sorry
+  rw [rotate_phaseShift]
 
 /- ===== r (1 qubit(s)) ===== -/
 
@@ -689,13 +689,13 @@ lemma rz_equiv_2 (lam : ℝ) :
 --   note: p: Verified: Qiskit PhaseGate(lambda) == phaseShift(lambda) exactly.
 lemma s_equiv_0 :
     sGate = phaseShift (π / 2) := by
-  sorry
+  rfl
 
 -- s equivalence #1 (2 instruction(s), global_phase=0.0)
 -- TODO_PROOF (direct mapping)
 lemma s_equiv_1 :
     sGate = tGate * tGate := by
-  sorry
+  exact tGate_mul_tGate.symm
 
 /- ===== sdg (1 qubit(s)) ===== -/
 
@@ -795,7 +795,7 @@ lemma sx_equiv_1 :
 --   note: p: Verified: Qiskit PhaseGate(lambda) == phaseShift(lambda) exactly.
 lemma t_equiv_0 :
     tGate = phaseShift (π / 4) := by
-  sorry
+  rfl
 
 -- t equivalence #1 (3 instruction(s), global_phase=0.0)
 -- TODO_PROOF (derived -- needs helper lemma first)
@@ -803,8 +803,10 @@ lemma t_equiv_0 :
 --   note: sdg: = sGate⁻¹; sGate is unitary so sGate⁻¹ = sGateᴴ. Either prove via phaseShift_mul_phaseShift or add sdgGate.
 lemma t_equiv_1 :
     tGate = phaseShift (-(π / 4)) * phaseShift (-(π / 2)) * σz := by
-  sorry
-
+  unfold tGate
+  rw [← phaseShift_π, phaseShift_mul_phaseShift, phaseShift_mul_phaseShift]
+  congr 1
+  ring
 /- ===== tdg (1 qubit(s)) ===== -/
 
 -- tdg equivalence #0 (1 instruction(s), global_phase=0.0)
@@ -844,7 +846,7 @@ lemma tdg_equiv_1 :
 --   note: u1 (source): u1(lambda) = p(lambda), same as p.
 lemma u1_equiv_1 (lam : ℝ) :
     phaseShift lam = phaseShift lam := by
-  sorry
+  rfl
 
 -- u1 equivalence #2 (1 instruction(s), global_phase=0.5*λ)
 -- TODO_PROOF (derived -- needs helper lemma first)
@@ -863,7 +865,7 @@ lemma u1_equiv_2 (lam : ℝ) :
 --   note: u2 (source): u2(phi,lam) = U(pi/2, phi, lam).
 lemma u2_equiv_0 (φ : ℝ) (lam : ℝ) :
     rotate (π / 2) (φ) lam = rotate (π / 2) (φ) lam := by
-  sorry
+  rfl
 
 -- u2 equivalence #1 (3 instruction(s), global_phase=5.497787143782138)
 -- TODO_PROOF (direct mapping)
@@ -896,7 +898,7 @@ lemma u2_equiv_1 (φ : ℝ) (lam : ℝ) :
 --   note: u: Verified: Qiskit U(theta,phi,lambda) == LeanQuantum rotate(theta,phi,delta) exactly, param-for-param, no phase correction. This is the load-bearing identity: most other single-qubit equivalences bottom out at U.
 lemma x_equiv_0 :
     σx = rotate π 0 π := by
-  sorry
+  exact rotate_σx.symm
 
 -- x equivalence #1 (4 instruction(s), global_phase=0.0)
 -- TODO_PROOF (direct mapping)
@@ -963,7 +965,7 @@ lemma x_equiv_3 :
 --   note: u: Verified: Qiskit U(theta,phi,lambda) == LeanQuantum rotate(theta,phi,delta) exactly, param-for-param, no phase correction. This is the load-bearing identity: most other single-qubit equivalences bottom out at U.
 lemma y_equiv_0 :
     σy = rotate π (π / 2) (π / 2) := by
-  sorry
+  exact rotate_σy.symm
 
 -- y equivalence #1 (6 instruction(s), global_phase=4.71238898038469)
 -- TODO_PROOF (direct mapping)
@@ -996,13 +998,13 @@ lemma y_equiv_4 :
 --   note: p: Verified: Qiskit PhaseGate(lambda) == phaseShift(lambda) exactly.
 lemma z_equiv_0 :
     σz = phaseShift π := by
-  sorry
+  exact phaseShift_π.symm
 
 -- z equivalence #1 (2 instruction(s), global_phase=0.0)
 -- TODO_PROOF (direct mapping)
 lemma z_equiv_1 :
     σz = sGate * sGate := by
-  sorry
+  exact sGate_mul_sGate.symm
 
 -- z equivalence #2 (2 instruction(s), global_phase=0.0)
 -- TODO_PROOF (derived -- needs helper lemma first)
