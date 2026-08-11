@@ -404,7 +404,7 @@ namespace QiskitEquiv
 --   note: u: Verified: Qiskit U(theta,phi,lambda) == LeanQuantum rotate(theta,phi,delta) exactly, param-for-param, no phase correction. This is the load-bearing identity: most other single-qubit equivalences bottom out at U.
 lemma h_equiv_0 :
     hadamard = rotate (π / 2) 0 π := by
-  sorry
+  rw [rotate_hadamard]
 
 -- h equivalence #1 (1 instruction(s), global_phase=0.0)
 -- TODO_PROOF (direct mapping)
