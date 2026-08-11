@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# Lean / Lake
+lean/.lake/
+*.olean
+*.ilean
+# NOTE: lake-manifest.json is intentionally NOT ignored -- it pins exact
+# dependency revisions (like a lockfile) and should be committed for
+# reproducible builds.
+
+# misc
+.DS_Store
+session_output.txt
+lake_build.log

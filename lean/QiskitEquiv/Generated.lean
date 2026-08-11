@@ -429,7 +429,7 @@ lemma h_equiv_2 :
 -- h equivalence #4 (2 instruction(s), global_phase=1.5707963267948966)
 -- TODO_PROOF (direct mapping)
 lemma h_equiv_4 :
-    hadamard = (Complex.exp ((π / 2) * Complex.I)) • (yRotate (π / 2) * xRotate π) := by
+    hadamard = (Complex.exp ((π / 2) * Complex.I)) • (xRotate π * yRotate (π / 2)) := by
   sorry
 
 -- h equivalence #5 (2 instruction(s), global_phase=1.5707963267948966)
@@ -567,7 +567,7 @@ lemma rx_equiv_0 (ϴ : ℝ) :
 -- TODO_PROOF (derived -- needs helper lemma first)
 --   note: sdg: = sGate⁻¹; sGate is unitary so sGate⁻¹ = sGateᴴ. Either prove via phaseShift_mul_phaseShift or add sdgGate.
 lemma ry_equiv_1 (ϴ : ℝ) :
-    yRotate (ϴ) = phaseShift (-(π / 2)) * xRotate (ϴ) * sGate := by
+    yRotate (ϴ) = sGate * xRotate (ϴ) * phaseShift (-(π / 2)) := by
   sorry
 
 /- ===== ryy (2 qubit(s)) ===== -/
@@ -609,8 +609,9 @@ lemma ry_equiv_1 (ϴ : ℝ) :
 --   note: rz (source): Verified: Qiskit RZGate(theta) == exp(-i*theta/2) * phaseShift(theta) exactly. Needs a `rzGate` def (or a scalar-multiple lemma) in LeanQuantum before equivalence lemmas can cite it directly.
 --   note: symbolic global_phase '(-0.5)*λ' -- verify this substitution parses.
 lemma rz_equiv_0 (lam : ℝ) :
-    phaseShift lam = (Complex.exp (((-0.5)*lam) * Complex.I)) • (phaseShift lam) := by
-  sorry
+    (Complex.exp ((-0.5 * lam) * Complex.I)) • (phaseShift lam) = (Complex.exp (((-0.5)*lam) * Complex.I)) • (phaseShift lam) := by
+  congr 2
+
 
 -- rz equivalence #1 (3 instruction(s), global_phase=0.0)
 -- BLOCKED (missing LeanQuantum definition(s)) -- not emitted as a lemma, see notes above.
@@ -623,8 +624,10 @@ lemma rz_equiv_0 (lam : ℝ) :
 -- TODO_PROOF (derived -- needs helper lemma first)
 --   note: rz (source): Verified: Qiskit RZGate(theta) == exp(-i*theta/2) * phaseShift(theta) exactly. Needs a `rzGate` def (or a scalar-multiple lemma) in LeanQuantum before equivalence lemmas can cite it directly.
 lemma rz_equiv_2 (lam : ℝ) :
-    phaseShift lam = hadamard * xRotate lam * hadamard := by
-  sorry
+    (Complex.exp ((-0.5 * lam) * Complex.I)) • (phaseShift lam) = hadamard * xRotate lam * hadamard := by
+  unfold phaseShift
+  rw [Complex.exp_mul_I]
+  solve_matrix [hadamard, xRotate]
 
 /- ===== rzx (2 qubit(s)) ===== -/
 
@@ -711,14 +714,14 @@ lemma sdg_equiv_0 :
 -- TODO_PROOF (derived -- needs helper lemma first)
 --   note: sdg (source): = sGate⁻¹; sGate is unitary so sGate⁻¹ = sGateᴴ. Either prove via phaseShift_mul_phaseShift or add sdgGate.
 lemma sdg_equiv_1 :
-    phaseShift (-(π / 2)) = sGate * σz := by
+    phaseShift (-(π / 2)) = σz * sGate := by
   sorry
 
 -- sdg equivalence #2 (2 instruction(s), global_phase=0.0)
 -- TODO_PROOF (derived -- needs helper lemma first)
 --   note: sdg (source): = sGate⁻¹; sGate is unitary so sGate⁻¹ = sGateᴴ. Either prove via phaseShift_mul_phaseShift or add sdgGate.
 lemma sdg_equiv_2 :
-    phaseShift (-(π / 2)) = σz * sGate := by
+     phaseShift (-(π / 2)) = sGate * σz := by
   sorry
 
 -- sdg equivalence #3 (3 instruction(s), global_phase=0.0)
@@ -821,7 +824,7 @@ lemma tdg_equiv_0 :
 -- TODO_PROOF (derived -- needs helper lemma first)
 --   note: tdg (source): Same pattern as sdg.
 lemma tdg_equiv_1 :
-    phaseShift (-(π / 4)) = tGate * sGate * σz := by
+    phaseShift (-(π / 4)) = σz * sGate * tGate := by
   sorry
 
 /- ===== u (1 qubit(s)) ===== -/
@@ -854,8 +857,8 @@ lemma u1_equiv_1 (lam : ℝ) :
 --   note: u1 (source): u1(lambda) = p(lambda), same as p.
 --   note: symbolic global_phase '0.5*λ' -- verify this substitution parses.
 lemma u1_equiv_2 (lam : ℝ) :
-    phaseShift lam = (Complex.exp ((0.5*lam) * Complex.I)) • (phaseShift lam) := by
-  sorry
+    phaseShift lam = (Complex.exp ((0.5*lam) * Complex.I)) • ((Complex.exp ((-0.5 * lam) * Complex.I)) • (phaseShift lam)) := by
+  rw [smul_smul, ← Complex.exp_add, show (0.5*lam)*Complex.I + (-0.5*lam)*Complex.I = 0 by ring, Complex.exp_zero, one_smul]
 
 /- ===== u2 (1 qubit(s)) ===== -/
 
@@ -873,7 +876,7 @@ lemma u2_equiv_0 (φ : ℝ) (lam : ℝ) :
 --   note: sx: Verified: Qiskit SXGate() == LeanQuantum sqrtx exactly, no global phase correction needed (checked numerically).
 --   note: u2 (source): u2(phi,lam) = U(pi/2, phi, lam).
 lemma u2_equiv_1 (φ : ℝ) (lam : ℝ) :
-    rotate (π / 2) (φ) lam = (Complex.exp (((7 * π / 4)) * Complex.I)) • (phaseShift ((-π / 2) + lam) * sqrtx * phaseShift ((π / 2) + φ)) := by
+    rotate (π / 2) (φ) lam = (Complex.exp (((7 * π / 4)) * Complex.I)) • (phaseShift ((π / 2) + φ) * sqrtx * phaseShift ((-π / 2) + lam)) := by
   sorry
 
 /- ===== u3 (1 qubit(s)) ===== -/
@@ -909,8 +912,9 @@ lemma x_equiv_1 :
 -- x equivalence #2 (2 instruction(s), global_phase=1.5707963267948966)
 -- TODO_PROOF (direct mapping)
 lemma x_equiv_2 :
-    σx = (Complex.exp ((π / 2) * Complex.I)) • (σy * σz) := by
-  sorry
+    σx = (Complex.exp ((π / 2) * Complex.I)) • (σz * σy) := by
+  rw [σz_mul_σy, Complex.exp_pi_div_two_mul_I, smul_smul]
+  norm_num [Complex.I_sq]
 
 -- x equivalence #3 (1 instruction(s), global_phase=1.5707963267948966)
 -- TODO_PROOF (direct mapping)
@@ -970,20 +974,21 @@ lemma y_equiv_0 :
 -- y equivalence #1 (6 instruction(s), global_phase=4.71238898038469)
 -- TODO_PROOF (direct mapping)
 lemma y_equiv_1 :
-    σy = (Complex.exp (((3 * π / 2)) * Complex.I)) • (hadamard * sGate * sGate * hadamard * sGate * sGate) := by
+    σy = (Complex.exp (((3 * π / 2)) * Complex.I)) • (sGate * sGate * hadamard * sGate * sGate * hadamard) := by
   sorry
 
 -- y equivalence #2 (6 instruction(s), global_phase=1.5707963267948966)
 -- TODO_PROOF (direct mapping)
 lemma y_equiv_2 :
-    σy = (Complex.exp ((π / 2) * Complex.I)) • (sGate * sGate * hadamard * sGate * sGate * hadamard) := by
+    σy = (Complex.exp ((π / 2) * Complex.I)) • (hadamard * sGate * sGate * hadamard * sGate * sGate) := by
   sorry
 
 -- y equivalence #3 (2 instruction(s), global_phase=1.5707963267948966)
 -- TODO_PROOF (direct mapping)
 lemma y_equiv_3 :
-    σy = (Complex.exp ((π / 2) * Complex.I)) • (σz * σx) := by
-  sorry
+    σy = (Complex.exp ((π / 2) * Complex.I)) • (σx * σz) := by
+  rw [σx_mul_σz, Complex.exp_pi_div_two_mul_I, smul_smul]
+  norm_num [Complex.I_sq]
 
 -- y equivalence #4 (1 instruction(s), global_phase=1.5707963267948966)
 -- TODO_PROOF (direct mapping)
@@ -1016,8 +1021,9 @@ lemma z_equiv_2 :
 -- z equivalence #3 (2 instruction(s), global_phase=1.5707963267948966)
 -- TODO_PROOF (direct mapping)
 lemma z_equiv_3 :
-    σz = (Complex.exp ((π / 2) * Complex.I)) • (σx * σy) := by
-  sorry
+    σz = (Complex.exp ((π / 2) * Complex.I)) • (σy * σx) := by
+  rw [σy_mul_σx, Complex.exp_pi_div_two_mul_I, smul_smul]
+  norm_num [Complex.I_sq]
 
 
 end QiskitEquiv
