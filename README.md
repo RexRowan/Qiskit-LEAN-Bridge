@@ -1,5 +1,7 @@
 # Qiskit LEAN bridge
 
+[![Qiskit Ecosystem](https://qisk.it/e-dd050939)](https://qisk.it/e)
+
 Bridges Qiskit's `StandardEquivalenceLibrary` (the gate identities the
 transpiler relies on) to formally verified proofs in
 [inQWIRE/LeanQuantum](https://github.com/inQWIRE/LeanQuantum).
